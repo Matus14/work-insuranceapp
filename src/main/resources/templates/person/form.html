@@ -1,0 +1,59 @@
+
+
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layout/base :: layout('Adding person', ~{::section})}">
+
+
+<section>
+
+    <h2 class="mt-5">New Client</h2>
+    <form th:action="@{/}" th:object="${person}" method="post">
+        <div class="row g-3">
+            <div>
+                <label>First Name</label>
+                <input type="text" th:field="*{firstName}" class="form-control" required >
+            </div>
+            <div>
+                <label>Last Name</label>
+                <input type="text" th:field="*{lastName}" class="form-control" required>
+            </div>
+            <div>
+                <label>Age</label>
+                <input type="number" th:field="*{age}" class="form-control" required>
+            </div>
+            <div>
+                <label>E-mail</label>
+                <input type="text" th:field="*{email}" class="form-control" required>
+            </div>
+            <div class="text-center p-3">
+                <button type="submit" class="btn btn-secondary">Confirm</button>
+            </div>
+        </div>
+    </form>
+
+</section>
+
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
